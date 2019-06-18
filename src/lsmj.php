@@ -7,7 +7,7 @@ class phrint
 
 	/**
 	 *
-	 * p (Print): Analyzes and outputs variable of any type
+	 * p (Print): Outputs type and value of input
 	 *
 	 * @param string/array/object $input any type of input
 	 * 
@@ -30,7 +30,7 @@ class phrint
 
 	/**
 	 *
-	 * l (List): Attempts to produce a list with line breaks based on input criteria
+	 * l (List): Prints the input as a vertical list
 	 *
 	 * @param string $input string
 	 * 
