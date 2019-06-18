@@ -70,7 +70,7 @@ Result:
 3
 ```
 
-Prints the input string on a bleached yellow background as a list with line breaks. The default delimiter is `,` but another can be passed as the second argument. The third argument is an optional regex remove function.
+Prints the input string on a bleached yellow background as a list with line breaks. The default delimiter is `,` but an optional different one can be passed as the second argument. The third argument is an optional regex remove function.
 
 ```
 $str = 'col-a.col-b.col-c';
