@@ -59,7 +59,7 @@ Prints the input preformatted on a bleached yellow background. Especially useful
 
 ```
 $str = 'a,b,c';
-phrint::l($arr);
+phrint::l($str);
 ```
 
 Result:
