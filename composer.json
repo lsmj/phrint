@@ -1,0 +1,24 @@
+{
+  "name": "lsmj/phrint",
+  "description": "PHP echo functions",
+  "type": "library",
+  "keywords": [
+    "php"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "lsmj",
+      "email": "lyder@animidas.no",
+      "role": "developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "lsmj\\": "src/"
+    }
+  }
+}
