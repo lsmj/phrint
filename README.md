@@ -8,8 +8,9 @@ Simple but handy echo functions for PHP programming.
 
 - [Installation](#installation)
 - [Composer autoloading in non-Laravel apps](#composer-autoloading-in-non-laravel-apps)
-- [Import class](#import-class-laravel)
-- [Usage](#usage)
+- [Import class](#import-class)
+- [Method: p (print)](#method-p-print)
+- [Method: l (list)](#method-l-list)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
