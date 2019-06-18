@@ -2,7 +2,7 @@
 
 namespace lsmj;
 
-class lsmj
+class phrint
 {
 
 	/**
