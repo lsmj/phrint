@@ -17,7 +17,7 @@ Simple but handy echo functions for PHP programming.
 ### Installation
 
 ```
-composer install lsmj\phrint
+composer require lsmj/phrint
 ```
 
 ### Composer autoloading in non-Laravel apps
