@@ -17,7 +17,7 @@ Simple but handy type and state testing for PHP programming.
 ### Installation
 
 ```
-composer require lsmj/phrint --dev
+composer require lsmj/phrint
 ```
 
 ### Composer autoloading in non-Laravel apps

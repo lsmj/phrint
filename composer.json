@@ -1,6 +1,6 @@
 {
   "name": "lsmj/phrint",
-  "description": "PHP echo functions",
+  "description": "PHP state testing functions",
   "type": "library",
   "keywords": [
     "php"
