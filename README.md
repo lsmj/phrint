@@ -7,7 +7,7 @@ Simple but handy type and state testing for PHP programming.
 ## Table of Contents
 
 - [Installation](#installation)
-- [Composer autoloading in non-Laravel apps](#composer-autoloading-in-non-laravel-apps)
+- [Composer autoloading in non-Laravel apps](#composer-autoload)
 - [Import class](#import-class)
 - [Method: p (print)](#method-p-print)
 - [Method: l (list)](#method-l-list)
@@ -17,18 +17,23 @@ Simple but handy type and state testing for PHP programming.
 ### Installation
 
 ```
-composer require lsmj/phrint
+composer require lsmj/phrint --dev
 ```
 
-### Composer autoloading in non-Laravel apps
+Uninstall using the following command:
+```
+composer remove lsmj/phrint --dev
+```
+
+### Composer autoload
 
 In public/index.php:
 
 ```
 require __DIR__ . '/../vendor/autoload.php';
-
+```
 or
-
+```
 require_once('../vendor/autoload.php');
 ```
 
@@ -58,7 +63,6 @@ Array
 ```
 
 Prints the input preformatted on a bleached yellow background. Especially useful when researching state types. Objects are JSON encoded.
-
 
 
 ### Method: l (list)
