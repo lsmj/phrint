@@ -7,7 +7,7 @@ class phrint
 
 	/**
 	 *
-	 * p (Print): Outputs type and value of input
+	 * p (Print): Outputs type and value of input (v1.1.3)
 	 *
 	 * @param string/array/object $input any type of input
 	 * 
