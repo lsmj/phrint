@@ -37,7 +37,6 @@ class phrint
 	 * @return void
 	 */
 	static function l(string $input, string $seperator=",", string $remove_string=null) {
-		$re = '/https:\/\/crm\.na1\.insightly\.com\/Settings\/UserDetails\//m';
 		if ($remove_string) {
 			$remove_string = preg_quote($remove_string, "/");
 			$input = preg_replace("/$remove_string/", '', $input);
