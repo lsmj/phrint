@@ -1,16 +1,19 @@
 # phrint (/prɪnt/)
 
-Simple but handy type and state testing for PHP programming.
+Simple and visual state testing for PHP programming. Works well when checking if data is returned by a method and/or quickly figuring out the data type. The p method is particularily useful for temporarily displaying data on an html page instead of writing it to the database. This is especially effective in combination with [livereload](https://www.npmjs.com/package/livereload) and the livereload browser extension, so you can work on your controller/model while seeing the returned result update everytime you save.
+
+![phrint_array](https://user-images.githubusercontent.com/35132192/60960803-0ed02300-a30b-11e9-9bfd-72ce8fbc713c.png)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 ## Table of Contents
 
 - [Installation](#installation)
-- [Composer autoloading in non-Laravel apps](#composer-autoload)
+- [Manual Composer autoloading](#manual-composer-autoloading)
 - [Import class](#import-class)
-- [Method: p (print)](#method-p-print)
-- [Method: l (list)](#method-l-list)
+- [Methods](#methods)
+- [p (print)](#p-print)
+- [l (list)](#l-list)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -20,19 +23,18 @@ Simple but handy type and state testing for PHP programming.
 composer require lsmj/phrint --dev
 ```
 
-Uninstall using the following command:
+Uninstall:
 ```
 composer remove lsmj/phrint --dev
 ```
 
-### Composer autoload
+### Manual Composer autoloading
 
-In public/index.php:
-
+index.php:
 ```
-require __DIR__ . '/../vendor/autoload.php';
+require_once('vendor/autoload.php');
 ```
-or
+public/index.php:
 ```
 require_once('../vendor/autoload.php');
 ```
@@ -43,7 +45,11 @@ require_once('../vendor/autoload.php');
 use lsmj\phrint;
 ```
 
-### Method: p (print)
+#### Methods
+
+### p (print)
+
+Prints the input preformatted on a bleached yellow background. Especially useful when tracking state types and data. Objects are JSON encoded.
 
 ```
 $arr = [1, 2, 3];
@@ -62,10 +68,8 @@ Array
 )
 ```
 
-Prints the input preformatted on a bleached yellow background. Especially useful when researching state types. Objects are JSON encoded.
 
-
-### Method: l (list)
+### l (list)
 
 ```
 $str = 'a,b,c';
@@ -80,7 +84,7 @@ Result:
 3
 ```
 
-Prints the input string on a bleached yellow background as a list with line breaks. The default delimiter is `,` but an optional different one can be passed as the second argument. The third argument is an optional regex remove function.
+Prints the input string on a bleached yellow background as a list with line breaks. The default delimiter is `,` but a different one can be passed as the second argument. The third argument is an optional regex remove function.
 
 ```
 $str = 'col-a.col-b.col-c';
