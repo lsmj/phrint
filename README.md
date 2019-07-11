@@ -82,7 +82,7 @@ Result:
 ```
 The default delimiter is `,` but a different one can be passed as the second argument. The third argument is an optional `regex` function that replaces the given input string with an empty string.
 
-Example code:
+Code example:
 ```php
 $str = 'col-a.col-b.col-c';
 phrint::l($str, '.', 'col-');
