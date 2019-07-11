@@ -17,38 +17,41 @@ Simple and visual state testing for PHP programming. Works well when checking if
 ## Installation
 ### Install with Composer
 ```
-composer require lsmj/phrint --dev
+$ composer require lsmj/phrint --dev
 ```
 Uninstall:
 ```
-composer remove lsmj/phrint --dev
+$ composer remove lsmj/phrint --dev
 ```
 ## Usage
-### Autoload
-Require autoload.php if you're not using a framework that already takes care of this, like Laravel.
+### Auto-load and import class
+Require Composer's autoload.php if you're not using a framework that already takes care of this, like Laravel. Import the class with `use lsmj\phrint`.
 
 index.php:
-```
+```php
+<?php
+
 require_once('vendor/autoload.php');
+
+use lsmj\phrint;
 ```
 public/index.php:
-```
+```php
+<?php
+
 require_once('../vendor/autoload.php');
-```
-### Import class
-```
+
 use lsmj\phrint;
 ```
 ## Methods
 ### p (print)
 Prints the input preformatted on a bleached yellow background. Especially useful when tracking state types or data. Objects are JSON encoded.
-```
-phrint::p(array $input);
-```
-Example code:
-```
-$arr = [1, 2, 3];
 
+`p(array $input)`
+
+Code example:
+```php
+$arr = [1, 2, 3];
 phrint::p($arr);
 ```
 Result:
@@ -63,13 +66,12 @@ Array
 ```
 ### l (list)
 Explodes and prints a comma-seperated string as a vertical list on a bleached yellow background. This is useful for viewing or counting elements (like in a CSV heading), creating a new array from the list, manipulating the element names or copying and pasting the resulting list into a spreadsheet.
-```
-phrint::l(string $input, [string $delimiter = "'"], [string $remove_string = null])
-```
-Example code:
-```
-$str = 'a,b,c';
 
+`l(string $input, [string $delimiter = "'"], [string $remove_string = null])`
+
+Code example:
+```php
+$str = 'a,b,c';
 phrint::l($str);
 ```
 Result:
@@ -81,9 +83,8 @@ Result:
 The default delimiter is `,` but a different one can be passed as the second argument. The third argument is an optional `regex` function that replaces the given input string with an empty string.
 
 Example code:
-```
+```php
 $str = 'col-a.col-b.col-c';
-
 phrint::l($str, '.', 'col-');
 ```
 Result:
