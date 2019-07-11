@@ -36,12 +36,12 @@ class phrint
 	 * 
 	 * @return void
 	 */
-	static function l(string $input, string $seperator=",", string $remove_string=null) {
+	static function l(string $input, string $delimiter=",", string $remove_string=null) {
 		if ($remove_string) {
 			$remove_string = preg_quote($remove_string, "/");
 			$input = preg_replace("/$remove_string/", '', $input);
 		}
-		$items = explode($seperator, $input);
+		$items = explode($delimiter, $input);
 		echo '<pre style="background-color:#dfdac4;padding:20px;border-radius:10px;color:#452317;">';
 		foreach ($items as $item) {
 			echo $item . '<br>';

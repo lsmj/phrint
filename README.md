@@ -9,26 +9,23 @@ Simple and visual state testing for PHP programming. Works well when checking if
 ## Table of Contents
 
 - [Installation](#installation)
-- [Manual Composer autoloading](#manual-composer-autoloading)
-- [Import class](#import-class)
-- [Methods](#methods)
-- [p (print)](#p-print)
-- [l (list)](#l-list)
+- [Usage](#usage)
+- [Method: p (print)](#p-print)
+- [Method: l (list)](#l-list)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-### Installation
-
+## Installation
+### Install with Composer
 ```
 composer require lsmj/phrint --dev
 ```
-
 Uninstall:
 ```
 composer remove lsmj/phrint --dev
 ```
-
-### Manual Composer autoloading
+## Usage
+### Autoload
+Require autoload.php if you're not using a framework that already takes care of this, like Laravel.
 
 index.php:
 ```
@@ -38,26 +35,23 @@ public/index.php:
 ```
 require_once('../vendor/autoload.php');
 ```
-
 ### Import class
-
 ```
 use lsmj\phrint;
 ```
-
-#### Methods
-
+## Methods
 ### p (print)
-
-Prints the input preformatted on a bleached yellow background. Especially useful when tracking state types and data. Objects are JSON encoded.
-
+Prints the input preformatted on a bleached yellow background. Especially useful when tracking state types or data. Objects are JSON encoded.
+```
+phrint::p(array $input);
+```
+Example code:
 ```
 $arr = [1, 2, 3];
+
 phrint::p($arr);
 ```
-
 Result:
-
 ```
 Type: array
 Array
@@ -67,32 +61,32 @@ Array
     [2] => 3
 )
 ```
-
-
 ### l (list)
-
+Explodes and prints a comma-seperated string as a vertical list on a bleached yellow background. This is useful for viewing or counting elements (like in a CSV heading), creating a new array from the list, manipulating the element names or copying and pasting the resulting list into a spreadsheet.
+```
+phrint::l(string $input, [string $delimiter = "'"], [string $remove_string = null])
+```
+Example code:
 ```
 $str = 'a,b,c';
+
 phrint::l($str);
 ```
-
 Result:
-
 ```
 1
 2
 3
 ```
+The default delimiter is `,` but a different one can be passed as the second argument. The third argument is an optional `regex` function that replaces the given input string with an empty string.
 
-Prints the input string on a bleached yellow background as a list with line breaks. The default delimiter is `,` but a different one can be passed as the second argument. The third argument is an optional regex remove function.
-
+Example code:
 ```
 $str = 'col-a.col-b.col-c';
+
 phrint::l($str, '.', 'col-');
 ```
-
 Result:
-
 ```
 a
 b
