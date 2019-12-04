@@ -64,6 +64,11 @@ Array
     [2] => 3
 )
 ```
+### m (message)
+Prints the input preformatted on a bleached yellow background. Useful when printing messages that needs to be easy to find visually.
+
+`m(string $input)`
+```
 ### l (list)
 Explodes and prints a comma-seperated string as a vertical list on a bleached yellow background. This is useful for viewing or counting elements (like in a CSV heading), creating a new array from the list, manipulating the element names or copying and pasting the resulting list into a spreadsheet.
 

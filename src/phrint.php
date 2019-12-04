@@ -10,7 +10,7 @@ class phrint
 	 * p (Print): Outputs type and value of input
 	 *
 	 * @param string/array/object $input any type of input
-	 * 
+	 *
 	 * @return void
 	 */
 	static function p($input) {
@@ -30,10 +30,24 @@ class phrint
 
 	/**
 	 *
+	 * m (Message): Outputs the string/integer input in the same style as p()
+	 *
+	 * @param string $input
+	 *
+	 * @return void
+	 */
+	static function m($input) {
+		echo '<pre style="background-color:#dfdac4;padding:20px;border-radius:10px;color:#452317;">';
+		echo $input;
+		echo '</pre>';
+	}
+
+	/**
+	 *
 	 * l (List): Prints the input as a vertical list
 	 *
 	 * @param string $input string
-	 * 
+	 *
 	 * @return void
 	 */
 	static function l(string $input, string $delimiter=",", string $remove_string=null) {
