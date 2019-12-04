@@ -45,7 +45,7 @@ require_once('../vendor/autoload.php');
 use lsmj\phrint;
 ```
 ## Methods
----
+
 ### p (print)
 Prints the input preformatted on a bleached yellow background. Especially useful when tracking state types or data. Objects are JSON encoded.
 
