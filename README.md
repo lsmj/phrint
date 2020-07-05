@@ -1,6 +1,6 @@
 # phrint (/prɪnt/)
 
-Simple and visual state testing for PHP programming. Works well when checking if data is returned by a method and/or quickly figuring out the data type. The p method is particularily useful for temporarily displaying data on an html page instead of writing it to the database. This is especially effective in combination with [livereload](https://www.npmjs.com/package/livereload) and the livereload browser extension, so you can work on your controller/model while seeing the returned result update everytime you save.
+Simple and visual state testing for PHP programming. Works well when checking if data is returned by a method and/or quickly figuring out the data type. The p method is particularily useful for temporarily displaying data on an html page instead of writing it to the database. This is especially effective in combination with [hot reloading](https://www.browsersync.io/), so you can work on your controller/model while seeing the returned result update everytime you save.
 
 ![phrint_array](https://user-images.githubusercontent.com/35132192/60960803-0ed02300-a30b-11e9-9bfd-72ce8fbc713c.png)
 
@@ -36,7 +36,7 @@ require_once('vendor/autoload.php');
 
 use lsmj\phrint;
 ```
-public/index.php:
+or in public/index.php:
 ```php
 <?php
 
