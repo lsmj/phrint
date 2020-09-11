@@ -1,6 +1,6 @@
 # phrint (/prɪnt/)
 
-Simple and visual state testing for PHP programming. Works well when checking if data is returned by a method and/or quickly figuring out the data type. The p method is particularily useful for temporarily displaying data on an html page instead of writing it to the database. This is especially effective in combination with [hot reloading](https://www.browsersync.io/), so you can work on your controller/model while seeing the returned result update everytime you save.
+Simple and visual state testing for PHP programming. Works well when checking if data is returned by a method and/or quickly figuring out the data type. The p method is particularily useful for temporarily displaying data on an html page. This is especially effective in combination with [hot reloading](https://www.browsersync.io/), so you can work on your method while seeing the returned result update everytime you save. The c (console) method is useful for printing out data in a console during testing.
 
 ![phrint_array](https://user-images.githubusercontent.com/35132192/60960803-0ed02300-a30b-11e9-9bfd-72ce8fbc713c.png)
 
@@ -9,20 +9,24 @@ Simple and visual state testing for PHP programming. Works well when checking if
 ## Table of Contents
 
 - [Installation](#installation)
+  - [Install with Composer](#install-with-composer)
 - [Usage](#usage)
-- [Method: p (print)](#p-print)
-- [Method: m (message)](#m-message)
-- [Method: l (list)](#l-list)
+  - [Auto-load and import class](#auto-load-and-import-class)
+- [Methods](#methods)
+  - [p (print)](#p-print)
+  - [c (console)](#c-console)
+  - [m (message)](#m-message)
+  - [l (list)](#l-list)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 ## Installation
 ### Install with Composer
-```
-$ composer require lsmj/phrint --dev
+```bash
+composer require lsmj/phrint --dev
 ```
 Uninstall:
-```
-$ composer remove lsmj/phrint --dev
+```bash
+composer remove lsmj/phrint --dev
 ```
 ## Usage
 ### Auto-load and import class
@@ -47,9 +51,9 @@ use lsmj\phrint;
 ## Methods
 
 ### p (print)
-Prints the input preformatted on a bleached yellow background. Especially useful when tracking state types or data. Objects are JSON encoded.
+Prints the input type and data on a clutter free bleached yellow background. Especially useful when tracking state types or data. Objects are JSON encoded.
 
-`p(array $input)`
+`p(mixed $input)`
 
 Code example:
 ```php
@@ -69,10 +73,17 @@ Array
 
 ---
 
-### m (message)
-Prints the input preformatted on a bleached yellow background. Useful when printing messages that needs to be easy to find visually.
+### c (console)
+Prints the input type and content without formatting. Useful when printing messages in a console.
 
-`m(string $input)`
+`c(mixed $input)`
+
+---
+
+### m (message)
+Prints the input data on a clutter free bleached yellow background. Useful when printing messages that needs to be easy to find visually.
+
+`m(string|int $input)`
 
 ---
 
